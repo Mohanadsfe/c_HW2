@@ -35,12 +35,9 @@ int main(){
 
     
 int matrix[N][N];
-/*printMatrix(matrix);
-printf("\n\n\n");
-printMatrix(matrix);*/
-//Smallest(matrix);
 
-static int counter=0;
+
+//static int counter=0;
 char ch;
 
 do{
@@ -73,10 +70,10 @@ case 'C':{
 
 default:
 {
-    counter=counter+1;
+    /*counter=counter+1;
     printf("\n\n\n");
     printf("%c",ch);    
-    printf("\n\n\n");
+    printf("\n\n\n");*/
 }
     break;
 }

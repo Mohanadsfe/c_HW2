@@ -24,29 +24,38 @@ return (x>=y)?y:x;
 }
 
 
+
+
 void Smallest(int arr[N][N]){
 
-/*printf("original matrix: ");
-  printMatrix(arr);
-    printf("\n\n\n");*/
+
+printf("original matrix:\n ");
+printMatrix(arr);
+printf("\n\n\n");
 
 for (size_t k = 0; k<N; k++)
 {
-    
 
     for (size_t i = 0; i<N; i++)
     {
         for (size_t j = 0; j<N; j++)
         {
-            arr[i][j]=min(arr[i][j], arr[i][k]+ arr[k][j]);
+
+            if (arr[i][k]>0 && arr[k][j]>0){
+            arr[i][j]=min(arr[i][j],(arr[i][k]+ arr[k][j]));   
+            }
+
         }
         
     }
    
-  /* printf("%ld :",k);
+
+
+
+    printf("%ld :",k);
     printf("\n");
     printMatrix(arr);
-    printf("\n\n\n");*/
+    printf("\n\n\n");
    
 }
 
@@ -58,7 +67,7 @@ for (size_t k = 0; k<N; k++)
 
 
 void funcB(int i,int j,int arr[][N]){
-if (arr[i][j]!=0)
+if (i!=j)
 {
     printf("True\n");
 }
@@ -70,16 +79,18 @@ else{
 
 
 void funcC(int i,int j,int arr[][N]){
-if (arr[i][j]!=0)
+
+
+if (i==j)
 {
-     printf("%d",arr[i][j]);
-      
-     printf("\n");
+    printf("%d",-1);
+    printf("\n");
 }
 else{
-     printf("%d",-1);
-     printf("\n");
+    printf("%d",arr[i][j]);
+        printf("\n");
 }
+
 
 }
 
