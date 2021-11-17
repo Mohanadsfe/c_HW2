@@ -26,9 +26,9 @@ return (x>=y)?y:x;
 
 void Smallest(int arr[N][N]){
 
-printf("original matrix: ");
+/*printf("original matrix: ");
   printMatrix(arr);
-    printf("\n\n\n");
+    printf("\n\n\n");*/
 
 for (size_t k = 0; k<N; k++)
 {
@@ -43,10 +43,10 @@ for (size_t k = 0; k<N; k++)
         
     }
    
-   printf("%ld :",k);
+  /* printf("%ld :",k);
     printf("\n");
     printMatrix(arr);
-    printf("\n\n\n");
+    printf("\n\n\n");*/
    
 }
 

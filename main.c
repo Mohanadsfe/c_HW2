@@ -83,6 +83,6 @@ default:
 
 }while (ch!='D');
 
-printf("%d",counter);
+//printf("%d",counter);
 
 }
