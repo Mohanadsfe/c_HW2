@@ -1,11 +1,22 @@
 #include<stdio.h>
 #define infinty 2147483647
 #include "my_mat.h"
+#define N 10
 
+void funcA(int mat[][N]){
 
+for (size_t i = 0; i < N; i++)
+{
+    for (size_t j = 0; j < N; j++)
+    {
+        scanf("%d",&mat[i][j]);
+    }
+        
+}
 
+}
 
-long min(long x,long y){
+int min(int x,int y){
 
 
 return (x>=y)?y:x;
@@ -13,11 +24,16 @@ return (x>=y)?y:x;
 }
 
 
-void Smallest(long arr[][N]){
+void Smallest(int arr[N][N]){
 
+printf("original matrix: ");
+  printMatrix(arr);
+    printf("\n\n\n");
 
 for (size_t k = 0; k<N; k++)
 {
+    
+
     for (size_t i = 0; i<N; i++)
     {
         for (size_t j = 0; j<N; j++)
@@ -25,48 +41,44 @@ for (size_t k = 0; k<N; k++)
             arr[i][j]=min(arr[i][j], arr[i][k]+ arr[k][j]);
         }
         
-        
     }
+   
+   printf("%ld :",k);
+    printf("\n");
+    printMatrix(arr);
+    printf("\n\n\n");
    
 }
 
-}
-
-void funcA(long mat[][N]){
-
-for (size_t i = 0; i < N; i++)
-{
-    for (size_t j = 0; j < N; j++)
-    {
-        scanf("%ld ",&mat[i][j]);
-    }
-        
-}
+   
 
 }
 
 
-void funcB(int i,int j,long arr[][N]){
-Smallest(arr);
+
+
+void funcB(int i,int j,int arr[][N]){
 if (arr[i][j]!=0)
 {
-    printf("True");
+    printf("True\n");
 }
 else{
-    printf("False");
+    printf("False\n");
 }
 
 }
 
 
-void funcC(int i,int j,long arr[][N]){
-Smallest(arr);
+void funcC(int i,int j,int arr[][N]){
 if (arr[i][j]!=0)
 {
-     printf("%ld",arr[i][j]);
+     printf("%d",arr[i][j]);
+      
+     printf("\n");
 }
 else{
      printf("%d",-1);
+     printf("\n");
 }
 
 }

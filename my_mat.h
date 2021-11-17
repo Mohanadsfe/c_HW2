@@ -1,10 +1,11 @@
 #include<stdio.h>
 #define N 10
-void Smallest(long arr[][N]);
-long min(long x,long y);
-void funcA(long mat[][N]);
-void funcB(int i,int j,long arr[][N]);
-void funcC(int i,int j,long arr[][N]);
+void Smallest(int arr[N][N]);
+int min(int x,int y);
+void funcA(int mat[N][N]);
+void funcB(int i,int j,int arr[N][N]);
+void funcC(int i,int j,int arr[N][N]);
+void printMatrix(int arr[N][N]);
 
 
 
