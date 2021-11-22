@@ -33,7 +33,6 @@ int min(int x, int y)
 
 
 
-void Smallest(int arr[N][N]){
 
 
 
