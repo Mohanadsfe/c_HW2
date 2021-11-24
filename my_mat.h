@@ -1,3 +1,5 @@
+#ifndef my_mat
+#define my_mat
 #include<stdio.h>
 #define N 10
 void Smallest(int arr[N][N]);
