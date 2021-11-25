@@ -1,15 +1,17 @@
+.PHONY = all clean 
 CC=gcc
 OBJS=my_mat.o  main.o
 EXEC=connections
 DEBUG = -g
-CFLAGS = -std=c99  -Wall -Werror $(DEBUG)
+CFLAGS = -Wall -Werror $(DEBUG)
 
-all : $(OBJS)
+all : $(EXEC)
+$(EXEC): $(OBJS)
 	$(CC) $(OBJS) -o $(EXEC)
-
-
 my_mat.o: my_mat.c my_mat.h
+	$(CC) $(CFLAGS) -c my_mat.c
 main.o: main.c my_mat.h
+	$(CC) $(CFLAGS) -c main.c
 
 clean:
-	rm -f $(EXEC) $(OBJS)
+	rm -f *.o *.a connections
